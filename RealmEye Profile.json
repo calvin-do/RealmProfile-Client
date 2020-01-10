@@ -1,7 +1,7 @@
 {
   "allowHttpBackend": false,
   "backendCommand": "node backend -c \"oi2mk53d6eof55kyhf6m5n8fjz4efg\" -s \"pHYxtdrhPgDDOz/u/U89z2JM/rbi6my0e1+qsGr7Kq0=\"",
-  "backendFolderName": "extension-getting-started\\services",
+  "backendFolderName": "extension-getting-started/services",
   "certificateExceptions": [],
   "extensionViews": [
     {
@@ -77,7 +77,7 @@
     "whitelistedPanelUrls": []
   },
   "frontendCommand": "",
-  "frontendFolderName": "extension-getting-started\\public",
+  "frontendFolderName": "extension-getting-started/public",
   "name": "RealmEye Profile",
   "version": 1
 }

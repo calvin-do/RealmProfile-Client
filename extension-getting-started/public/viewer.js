@@ -11,13 +11,11 @@ const requests = {
 };
 
 function createRequest (type, method) {
-    
   return {
     type: type,
     url: location.protocol + '//localhost:8081/color/' + method,
     success: updateBlock,
     error: logError
-      
   };
 }
 
@@ -58,25 +56,18 @@ function logSuccess(hex, status) {
 }
 
 $(function () {
-  // when we click the cycle button
   $('#postSubmit').click(function () {
-  if(!token) { return twitch.rig.log('Not authorized'); }
-//    $('#postForm').bind("postSubmit", postForm);
-      
-    var content = $('#postInput').val();
+    if(!token) { return twitch.rig.log('Not authorized'); }
+
+    const content = $('#postInput').val();
     twitch.rig.log("This is the content: " + content);
     twitch.rig.log("This is length: " + content.length);
-//    twitch.rig.log("This is the requests.test: " + requests.test)  
-//    twitch.rig.log("This is the request's data: " + request.data)
-//    twitch.rig.log("This is the new request's data: " + request.data)
-      
+
     if (content.length > 0) {
-        
-        request = requests.test;
-        request.data = content;
-        twitch.rig.log('Requesting a color cycle');
-        $.ajax(request);
-        
+      $.post(`http://localhost:8081/color/test`, { input:content }, function(data, status) {
+        twitch.rig.log("here");
+        twitch.rig.log(data);
+      });
     }
   });
 });
