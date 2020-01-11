@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+        }
+
+        li {
+          float: left;
+        }
+
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+
+        /* Change the link color to #111 (black) on hover */
+        li a:hover {
+          background-color: #111;
+        }
+        
+        
+    </style>
+    <title>Viewer Page</title>
+</head>
+<body style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+    <div id="app" class="full-height"></div>
+    <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="viewer.js" type="text/javascript"></script>
+    
+    
+    <div>
+        <ul>
+            <li><a href="active_char.html">Active</a></li>
+            <li><a href="character_list.html">Character List</a></li>
+            <li><a href="graveyard.html">Graveyard</a></li>
+            <li><a href="stats.html">Stats</a></li>
+        </ul>
+    </div>
+    
+    <h2>Enter a username</h2>
+    <div>
+            <form id="postForm">
+                <input type="text" id="postInput" name="Username">
+                <input type="submit" id="postSubmit">
+            </form>
+    </div>
+    
+</body>
+</html>
